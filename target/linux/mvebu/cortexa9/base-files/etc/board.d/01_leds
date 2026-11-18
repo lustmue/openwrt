@@ -54,6 +54,13 @@ linksys,wrt32x)
 	ucidef_set_led_usbport "usb2" "USB 2" "pca963x:venom:blue:usb3_1" "usb2-port1" "usb3-port1"
 	ucidef_set_led_usbport "usb2_ss" "USB 2 SS" "pca963x:venom:blue:usb3_2" "usb3-port1"
 	;;
+wd,cloud-mirror-gen1)
+	ucidef_set_led_default "power" "Power" "blue:power" "1"
+	ucidef_set_led_ataport "hdd1" "HDD 1" "blue:disk-0" "1"
+	ucidef_set_led_ataport "hdd2" "HDD 2" "blue:disk-1" "2"
+	ucidef_set_led_default "hdd1_err" "HDD 1 Error" "red:disk-0" "0"
+	ucidef_set_led_default "hdd2_err" "HDD 2 Error" "red:disk-1" "0"
+	;;
 esac
 
 board_config_flush
